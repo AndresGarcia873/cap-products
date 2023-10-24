@@ -1,5 +1,15 @@
 namespace com.logali;
 
+type Name : String(50);
+
+type Address {
+    Street     : String;
+    City       : String;
+    State      : String(2);
+    PostalCode : String(5);
+    Country    : String(3);
+};
+
 entity Products {
     key ID               : UUID;
         Name             : String;
@@ -14,17 +24,13 @@ entity Products {
         Quantity         : Decimal(16, 2);
 };
 
-entity Supplier {
-    key ID         : UUID;
-        Name       : String;
-        Street     : String;
-        City       : String;
-        State      : String(2);
-        PostalCode : String(5);
-        Country    : String(3);
-        Email      : String;
-        Phone      : String;
-        Fax        : String;
+entity Suppliers {
+    key ID      : UUID;
+        Name    : String;
+        Address : Address;
+        Email   : String;
+        Phone   : String;
+        Fax     : String;
 };
 
 entity Categories {
@@ -65,6 +71,7 @@ entity ProductReview {
 };
 
 entity SalesData {
-    key DeliveryDate : DateTime;
+    key ID           : UUID;
+        DeliveryDate : DateTime;
         Revenue      : Decimal(16, 2);
 };

@@ -1,4 +1,4 @@
-﻿ID;Name;Street;City;State;PostalCode;Country;Email;Phone;Fax
+﻿ID;Name;address_Street;address_City;address_State;address_PostalCode;address_Country;Email;Phone;Fax
 Tq7hDVJNvw4vO9dIx1OEdIL05;Planeta;Cll. 65;Bogotá;1;11011;CO;editorialplaneta@gmail.com;7256489;123-555-0001
 C00kOKz9is8Q6uzoyPPa85B4I;Seix Barral;Cll. 136;Bogotá;1;11011;CO;editorialseix@gmail.com;9795842;958-427-3543
 06RqGUev2x07i7yJlhybXawph;Destino;Cll. 56;Bogotá;1;11011;CO;editorialdestino@gmail.com;7884233;423-335-5655
