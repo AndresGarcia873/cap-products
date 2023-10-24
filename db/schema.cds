@@ -1,6 +1,6 @@
 namespace com.logali;
 
-type Name               : String(50);
+type Name : String(50);
 
 type Address {
     Street     : String;
@@ -29,6 +29,8 @@ type Address {
 //     }
 // }
 
+type Dec  : Decimal(16, 2);
+
 entity Products {
     key ID               : UUID;
         Name             : String;
@@ -36,8 +38,8 @@ entity Products {
         ImageUrl         : String;
         ReleaseDate      : DateTime;
         DiscontinuedDate : DateTime;
-        Price            : Decimal(16, 2);
-        Height           : Decimal(16, 2);
+        Price            : Dec;
+        Height           : type of Price; //Decimal(16, 2);
         Width            : Decimal(16, 2);
         Depth            : Decimal(16, 2);
         Quantity         : Decimal(16, 2);
@@ -45,7 +47,7 @@ entity Products {
 
 entity Suppliers {
     key ID      : UUID;
-        Name    : String;
+        Name    : Products : Name; //String;
         Address : Address;
         Email   : String;
         Phone   : String;
