@@ -1,6 +1,6 @@
 namespace com.logali;
 
-type Name : String(50);
+type Name   : String(50);
 
 type Address {
     Street     : String;
@@ -29,7 +29,27 @@ type Address {
 //     }
 // }
 
-type Dec  : Decimal(16, 2);
+// type Gender : String enum {
+//     male;
+//     female;
+// };
+
+// entity Order {
+//     clientGender : Gender;
+//     status       : Integer enum {
+//         submitted = 1;
+//         fulfiller = 2;
+//         shipped   = 3;
+//         cancel    = -1;
+//     };
+//     priority     : String @assert.range enum {
+//         high;
+//         medium;
+//         low;
+//     };
+// }
+
+type Dec    : Decimal(16, 2);
 
 entity Products {
     key ID               : UUID;
@@ -47,7 +67,7 @@ entity Products {
 
 entity Suppliers {
     key ID      : UUID;
-        Name    : Products : Name; //String;
+        Name    : Products:Name; //String;
         Address : Address;
         Email   : String;
         Phone   : String;
