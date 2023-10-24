@@ -127,19 +127,28 @@ entity SalesData {
 };
 
 
-entity SelProducts as
+entity SelProducts   as
     select from Products
     left join ProductReview
         on Products.Name = ProductReview.Name
     {
         Rating,
         Products.Name,
-        Sum(
-            Price
-        ) as TotalPrice: Products:Price
+        Sum(Price) as TotalPrice : Products:Price
     }
     group by
         Rating,
         Products.Name
     order by
         Rating;
+
+entity ProjProducts  as projection on Products;
+
+entity ProjProducts2 as projection on Products {
+    *
+};
+
+entity ProjProducts3 as projection on Products {
+    ReleaseDate,
+    Name
+};
