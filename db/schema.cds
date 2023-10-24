@@ -1,6 +1,6 @@
 namespace com.logali;
 
-type Name : String(50);
+type Name               : String(50);
 
 type Address {
     Street     : String;
@@ -9,6 +9,25 @@ type Address {
     PostalCode : String(5);
     Country    : String(3);
 };
+
+// type EmailsAddresses_01 : array of {
+//     kind  : String;
+//     email : String;
+// }
+
+// type EmailsAddresses_02 {
+//     kind  : String;
+//     email : String;
+// }
+
+// entity Emails {
+//     email_01 :      EmailsAddresses_01;
+//     email_02 : many EmailsAddresses_02;
+//     email_03 : many {
+//         kind  : String;
+//         email : String;
+//     }
+// }
 
 entity Products {
     key ID               : UUID;
