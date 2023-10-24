@@ -53,7 +53,7 @@ type Dec  : Decimal(16, 2);
 
 entity Products {
     key ID               : UUID;
-        Name             : String;
+        Name             : String not null;
         Description      : String;
         ImageUrl         : String;
         ReleaseDate      : DateTime default $now;
